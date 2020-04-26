@@ -11,29 +11,16 @@
 <script src='https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/renderers/CSS2DRenderer.js'></script>
 <script src='./js/dataAgent.js'></script>
 <script src='./js/render.js'></script>
+<script src='./js/menu.js'></script>
+ <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
 
-<script type="x-shader/x-vertex" id="vertexshader">
-    attribute float size;
-    varying vec3 vColor;
-    void main() {
-        vColor = color;
-        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-        gl_PointSize = size * ( 300.0 / -mvPosition.z );
-        gl_Position = projectionMatrix * mvPosition;
-    }
-</script>
-
-<script type="x-shader/x-fragment" id="fragmentshader">
-    uniform sampler2D pointTexture;
-    varying vec3 vColor;
-    void main() {
-        gl_FragColor = vec4( vColor, 1.0 );
-        gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
-    }
-</script>
-
-
-
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a> 
+    <a href="#">Link 3</a>
+  </div>
+</div> 
 
 </body>
 </html>
